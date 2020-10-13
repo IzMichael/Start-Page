@@ -46,7 +46,7 @@ function search() {
         return;
     }
 
-    if (value.startsWith('https://') || value.startsWith('http://')) {
+    if (value.startsWith('https://') || value.startsWith('http://') || value.endsWith(".xyz") || value.endsWith(".com") || value.endsWith(".nz") || value.endsWith(".co.nz")) {
         window.location = value;
     } else {
         window.location = searchEngineUrl + encodeURIComponent(value);
