@@ -10,4 +10,19 @@
 body {
     padding: 0;
     margin: 0;
+    user-select: none;
+}
+
+p, a, #input {
+    font-family: Consolas, monaco, monospace;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: lighter;
+    font-size: 18px;
+    color: rgb(204,204,204);
+    background-color: rgb(12,12,12);
+}
+
+.cli {
+    background-color: rgb(12,12,12);
 }
