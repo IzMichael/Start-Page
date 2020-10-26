@@ -10,7 +10,7 @@ function selectCL() {
 
 function process() {
     var input = document.getElementById("input").value;
-    output = input.replace(/ /g,"_");
+    output = input.replace(/ /g, "_");
     print(input)
     clearInput();
     console.log("Run command: " + output)
@@ -91,12 +91,20 @@ function mchn_pacman() {
     window.location.href = "https://storage.googleapis.com/tfjs-examples/webcam-transfer-learning/dist/index.html";
 }
 
+function time() {
+    var today = new Date();
+    var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date + ' ' + time;
+    echoprintNl(dateTime)
+}
+
 // Do not Modify below this line.
 
 let batteryPromise = navigator.getBattery();
 
 function printBatteryStatus(batteryObject) {
-    var batteryLevel = (batteryObject.level*100+"%");
+    var batteryLevel = (batteryObject.level * 100 + "%");
     echoprint("Charging: " + batteryObject.charging);
     echoprint("Battery Level: " + batteryLevel);
     if (batteryObject.charging == true) {
