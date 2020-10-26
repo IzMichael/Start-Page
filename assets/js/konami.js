@@ -1,10 +1,10 @@
 // a key map of allowed keys
 var allowedKeys = {
-    37: 'left'
+    39: 'right',
 };
 
 // the 'official' Konami Code sequence
-var konamiCode = ['left'];
+var konamiCode = ['right'];
 
 // a variable to remember the 'position' the user has reached so far.
 var konamiCodePosition = 0;
@@ -33,5 +33,5 @@ document.addEventListener('keydown', function (e) {
 });
 
 function activateCheats() {
-    window.history.back();
+    window.location = "/linkgui";
 }
