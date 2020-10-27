@@ -99,6 +99,21 @@ function time() {
     echoprintNl(dateTime)
 }
 
+function sos() {
+    echoprintNl("Opening SOS Assignment");
+    window.location.href = "https://izmm.xyz/iz-sos";
+}
+
+function eng() {
+    echoprintNl("Opening ENG Assignment");
+    window.location.href = "https://izmm.xyz/iz-eng";
+}
+
+function sci() {
+    echoprintNl("Opening SCI Assignment");
+    window.location.href = "https://izmm.xyz/iz-sci";
+}
+
 // Do not Modify below this line.
 
 let batteryPromise = navigator.getBattery();
