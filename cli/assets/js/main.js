@@ -83,7 +83,7 @@ function sys_b() {
 
 function link_gui() {
     echoprintNl("Opening Links GUI");
-    window.location.href = "/linkgui";
+    window.location.href = "/";
 }
 
 function mchn_pacman() {

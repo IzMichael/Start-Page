@@ -1,0 +1,20 @@
+<head>
+    <title>IzMichael's Web CLI</title>
+    <link rel="stylesheet" href="/assets/tailwind.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body id="body" onload="load()" onclick="selectCL()" onkeydown="selectCL()" class="flex flex-col cli w-screen h-screen overflow-hidden">
+    <div class="w-screen p-5 flex-1 flex flex-col text-white justify-end overflow-hidden" id="log">
+        <p>-------------------</p>
+        <a href="https://github.com/izmichael/start-page">IzMichael's Web CLI</a>
+        <p>© <a href="https://izmichael.xyz">IzMichael</a> 2020</p>
+        <p>-------------------</p>
+        <br>
+    </div>
+    <form class="pl-5 w-full flex flex-row justify-center items-center" action="#" onsubmit="process();return false">
+        <p>https://start.michaelmartin.tech></p>
+        <input id="input" class="bg-black flex-1" style="outline: none;">
+    </form>
+</body>
