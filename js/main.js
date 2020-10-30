@@ -48,6 +48,8 @@ function search() {
 
     if (value.startsWith('https://') || value.startsWith('http://') || value.endsWith(".xyz") || value.endsWith(".com") || value.endsWith(".nz") || value.endsWith(".co.nz")) {
         window.location = value;
+    } else if (value == 'cli') {
+        window.location.href = '/cli';
     } else {
         window.location = searchEngineUrl + encodeURIComponent(value);
     }
