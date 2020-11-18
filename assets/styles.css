@@ -1,0 +1,131 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+/* Other */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.siteItem {
+    background-color: rgb(219, 226, 231);
+    padding: 0.75rem;
+    flex: 1 1 0%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.siteItemM {
+    background-color: rgb(219, 226, 231);
+    padding: 0.75rem;
+    flex: 1 1 0%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-top: 1px inset rgba(255, 255, 255, 0.4);
+}
+
+.siteItem:hover {
+    background-color: rgb(203, 210, 214);
+    padding: 0.75rem;
+    flex: 1 1 0%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.siteItemM:hover {
+    background-color: rgb(203, 210, 214);
+    padding: 0.75rem;
+    flex: 1 1 0%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.weatherContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    border-radius: 0.5rem;
+    flex-direction: column;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    grid-gap: 1rem;
+    background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+}
+
+#weather.sunny {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    border-radius: 0.5rem;
+    flex-direction: column;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    grid-gap: 1rem;
+    background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
+}
+
+#weather.cloudy {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    border-radius: 0.5rem;
+    flex-direction: column;
+    text-transform: capitalize;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    grid-gap: 1rem;
+    background-image: linear-gradient(to right top, #63747c, #71858e, #7f96a0, #8da8b2, #9bbac5);
+}
+
+#weather.rainy {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    border-radius: 0.5rem;
+    flex-direction: column;
+    text-transform: capitalize;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    grid-gap: 1rem;
+    background-image: linear-gradient(to right top, #637c7b, #718e8c, #7ea09e, #8db2b0, #9bc5c3);
+}
+
+#weather.clear {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    border-radius: 0.5rem;
+    flex-direction: column;
+    text-transform: capitalize;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    grid-gap: 1rem;
+    background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+}
+
+.weatherItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

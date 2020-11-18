@@ -26,21 +26,21 @@ function reInit() {
 function Nlprint(toPrint) {
     var log = document.getElementById("log");
     var oldLog = document.getElementById("log").innerHTML;
-    var newLog = oldLog + "<br>" + "<p>" + "https://start.michaelmartin.tech>" + toPrint + "</p>";
+    var newLog = oldLog + "<br>" + "<p>" + "https://start.michaelmartin.tech/cli>" + toPrint + "</p>";
     log.innerHTML = newLog;
 }
 
 function printNl(toPrint) {
     var log = document.getElementById("log");
     var oldLog = document.getElementById("log").innerHTML;
-    var newLog = oldLog + "<p>" + "https://start.michaelmartin.tech>" + toPrint + "</p>" + "<br>";
+    var newLog = oldLog + "<p>" + "https://start.michaelmartin.tech/cli>" + toPrint + "</p>" + "<br>";
     log.innerHTML = newLog;
 }
 
 function print(toPrint) {
     var log = document.getElementById("log");
     var oldLog = document.getElementById("log").innerHTML;
-    var newLog = oldLog + "<p>" + "https://start.michaelmartin.tech>" + toPrint + "</p>";
+    var newLog = oldLog + "<p>" + "https://start.michaelmartin.tech/cli>" + toPrint + "</p>";
     log.innerHTML = newLog;
 }
 

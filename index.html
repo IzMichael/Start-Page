@@ -1,88 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <title>Start Page - Page 1</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="js/konami.js"></script>
-    <script src="js/konami2.js"></script>
-    <noscript>
-        <style>
-            #clock {
-                display: none;
-            }
-        </style>
-    </noscript>
+    <title>Start Page</title>
+    <link rel="stylesheet" href="/assets/tailwind.css">
+    <link rel="stylesheet" href="https://resources.izmichael.xyz/assets/tailwind.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/import-html.js"></script>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/js/weather.js"></script>
 </head>
 
-<body>
-    <main>
-        <div id="top-div">
-            <div id="clock-div">
-                <h1 id="clock">
-                    00/00/0000
-                    00:00:00
-                </h1>
-            </div>
-
-            <form id="search-form" action="https://google.com">
-                <div id="search-bar-wrapper">
-                    <input id="search-bar" name="q" type="text" title="Search" />
-                    <button id="search-bar-btn" type="submit">&#128270;</button>
-                </div>
-            </form>
+<body onload="load()" class="font-stnd bg-gray-200 p-24 w-screen h-screen flex flex-col">
+    <div class="h-64 w-full flex flex-col justify-center items-center gap-0">
+        <a class="text-6xl" href="javascript:processFromButton(1);" id="clock"></a>
+        <a class="text-4xl mb-4" href="javascript:processFromButton(1);" id="date"></a>
+        <form onsubmit="runOmnibox(); return false" class="h-12 w-2/3">
+            <input autofocus onload="this.focus" id="omnibox" style="outline: none;" spellcheck="false"
+                class="w-full h-full rounded-full border-black border-2 px-5 text-xl align-middle">
+        </form>
+    </div>
+    <div id="linkPages">
+        <div class="page w-full h-64 px-10 flex flex-row gap-5 links1" id="1"></div>
+        <div class="page w-full h-64 px-10 flex flex-row gap-5 links2 hidden" id="2"></div>
+        <div class="page w-full h-64 px-10 flex flex-row gap-5 links3 hidden" id="3"></div>
+        <div class="page w-full h-64 px-10 flex flex-row gap-5 links4 hidden" id="4"></div>
+        <div class="page w-full h-64 px-10 flex flex-row gap-5 links5 hidden" id="5"></div>
+    </div>
+    <div id="actionPanel" class="">
+        <div class="w-full h-64 weatherContainer hidden flex p-5" id="weather">
+            <div id="description" class="weatherItem"></div>
+            <div id="iconContainer" class="weatherItem" style="grid-row: span 4 / span 4;"></div>
+            <h1 id="temp" class="weatherItem"></h1>
+            <div id="location" class="weatherItem"></div>
+            <div id="country" class="weatherItem"></div>
         </div>
-        <div id="links-container">
-            <section class="link-section">
-                <h2 class="link-section-title red">Favourites</h2>
-                <hr />
-                <ul class="link-list">
-                    <li class="link-list-item"><a class="link" href="notion://www.notion.so/izmichael/Notes-4385aa585e2b4d6aa645d0f41f0a00a6">Notion</a></li>
-                    <li class="link-list-item"><a class="link" href="https://www.youtube.com/">YouTube</a></li>
-                    <li class="link-list-item"><a class="link" href="notion://www.notion.so/izmichael/Status-Dashboard-8fd471bb71214b389ad8fba41210114d">Dashboard</a></li>
-                    <li class="link-list-item"><a class="link" href="https://calendar.google.com/calendar/r/week">Calendar</a></li>
-                    <li class="link-list-item"><a class="link" href="https://outlook.live.com/mail/0/inbox">Outlook</a></li>
-                </ul>
-            </section>
-            <section class="link-section">
-                <h2 class="link-section-title blue">Personal</h2>
-                <hr />
-                <ul class="link-list">
-                    <li class="link-list-item"><a class="link" href="https://digital.anz.co.nz/preauth/web/service/login">ANZ Banking</a></li>
-                    <li class="link-list-item"><a class="link" href="https://www.theverge.com/">The Verge</a></li>
-                    <li class="link-list-item"><a class="link" href="https://twitter.com/home">Twitter</a></li>
-                    <li class="link-list-item"><a class="link" href="https://www.reddit.com/">Reddit</a></li>
-                    <li class="link-list-item"><a class="link" href="https://www.facebook.com/">Facebook</a></li>
-                </ul>
-            </section>
-            <section class="link-section">
-                <h2 class="link-section-title green">Games</h2>
-                <hr />
-                <ul class="link-list">
-                    <li class="link-list-item"><a class="link" href="https://my.minecraft.net/en-us/profile/">Minecraft</a></li>
-                    <li class="link-list-item"><a class="link" href="https://www.roblox.com/home">Roblox</a></li>
-                    <li class="link-list-item"><a class="link" href="http://platinum.my.pebble.host:8194/">PC Dynmap</a></li>
-                    <li class="link-list-item"><a class="link" href="https://www.curseforge.com/minecraft/mc-mods">MC Curseforge</a></li>
-                    <li class="link-list-item"><a class="link" href="https://panel.pebblehost.com/server/103913">My MC Server</a></li>
-                </ul>
-            </section>
-            <section class="link-section">
-                <h2 class="link-section-title purple">Page Select</h2>
-                <hr />
-                <ul class="link-list">
-                    <li class="link-list-item"><a class="link-s" href="index.html">Favourites, Personal, Games</a></li>
-                    <li class="link-list-item"><a class="link-s" href="indexpg2.html">Streaming, Coding</a></li>
-                    <li class="link-list-item"><a class="link-s" href="indexpg3.html">Shopping, Discord, Google</a></li>
-                    <li class="link-list-item"><a class="link-s" href="indexpg4.html">TBD, TBD, TBD</a></li>
-                    <li class="link-list-item"><a class="link-s" href="school.html">School</a></li>
-                </ul>
-            </section>
-        </div>
-    </main>
-
-    <script src="js/main.js"></script>
+    </div>
 </body>
-
-</html>
