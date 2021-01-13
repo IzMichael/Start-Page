@@ -25,7 +25,7 @@
         <div class="page w-full h-64 px-10 flex flex-row gap-5 links4 hidden" id="4"></div>
         <div class="page w-full h-64 px-10 flex flex-row gap-5 links5 hidden" id="5"></div>
     </div>
-    <div id="actionPanel" class="">
+    <div id="actionPanel">
         <div class="w-full h-64 weatherContainer hidden flex p-5" id="weather">
             <div id="description" class="weatherItem"></div>
             <div id="iconContainer" class="weatherItem" style="grid-row: span 4 / span 4;"></div>
@@ -33,5 +33,10 @@
             <div id="location" class="weatherItem"></div>
             <div id="country" class="weatherItem"></div>
         </div>
+    </div>
+    <div class="w-full h-64 serverPanel hidden grid grid-cols-5 p-5" id="serverPanel">
+        <p onclick="localServer(5500)" class="cursor-pointer flex justify-center items-center text-center rounded-md bg-blue-400">Default VS Code <br> (5500)</p>
+        <p onclick="localServer(3000)" class="cursor-pointer flex justify-center items-center text-center rounded-md bg-blue-400">Default React <br> (3000)</p>
+        <p onclick="localServer(4000)" class="cursor-pointer flex justify-center items-center text-center rounded-md bg-blue-400">Default Jekyll <br> (4000)</p>
     </div>
 </body>

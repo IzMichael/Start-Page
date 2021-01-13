@@ -43,12 +43,14 @@ function hideAll() {
     var page4 = document.getElementById("4");
     var page5 = document.getElementById("5");
     var actionPanel = document.getElementById("actionPanel");
+    var serverPanel = document.getElementById("serverPanel");
     page1.classList.add("hidden");
     page2.classList.add("hidden");
     page3.classList.add("hidden");
     page4.classList.add("hidden");
     page5.classList.add("hidden");
     actionPanel.classList.add("hidden");
+    serverPanel.classList.add("hidden");
 }
 
 function runOmnibox() {
@@ -102,4 +104,13 @@ function checkTime(i) {
         i = "0" + i
     }; // add zero in front of numbers < 10
     return i;
+}
+
+function showServerPanel() {
+    var serverPanel = document.getElementById("serverPanel");
+    serverPanel.classList.remove("hidden");
+}
+
+function localServer(port) {
+    window.location = 'http://localhost:' + port;
 }
