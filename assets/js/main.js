@@ -9,7 +9,7 @@ function load() {
     focusOmnibox();
     startTime();
     weatherBallon("2182720");
-    showDate()
+    showDate();
 }
 
 function showDate() {
@@ -67,6 +67,9 @@ function runOmnibox() {
         clearOmnibox();
     } else {
         console.log("else")
+        if (omnibox.value.includes('.') && tlds.includes(splitAtSearch(omnibox.value, '.')[1].slice(1))) {
+            return window.location.href = 'https://' + omnibox.value
+        }
         var searchURL = "https://google.com/search?q=";
         window.location.href = searchURL + omnibox.value;
         clearOmnibox();
@@ -113,4 +116,38 @@ function showServerPanel() {
 
 function localServer(port) {
     window.location = 'http://localhost:' + port;
+}
+
+function splitAtSearch(string, search) {
+    let isValid = string !== '' // Disallow Empty
+        &&
+        typeof string === 'string' // Allow strings
+        ||
+        typeof string === 'number' // Allow numbers
+
+    if (!isValid) {
+        return false
+    } // Failed
+    else {
+        string += ''
+    } // Ensure string type
+
+    // Search
+    let searchIndex = string.indexOf(search)
+    let isBlank = ('' + search) === ''
+    let isFound = searchIndex !== -1
+    let noSplit = searchIndex === 0
+    let parts = []
+
+    // Remains whole
+    if (!isFound || noSplit || isBlank) {
+        parts[0] = string
+    }
+    // Requires splitting
+    else {
+        parts[0] = string.substring(0, searchIndex)
+        parts[1] = string.substring(searchIndex)
+    }
+
+    return parts
 }

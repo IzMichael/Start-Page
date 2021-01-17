@@ -1,7 +1,6 @@
 const key = '8b49854cb7747b81c0b0d9d9b4705806';
 
 function weatherBallon(cityID) {
-    console.log('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
     fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
         .then(function (resp) {
             return resp.json()
