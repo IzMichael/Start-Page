@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IzHub - Colour Tools</title>
+        <script src="/assets/js/colours.js"></script>
+        <link rel="stylesheet" href="/assets/styles.css">
+        <link rel="stylesheet" href="/assets/tailwind.css">
+        <link rel="stylesheet" href="/assets/styles.css">
+    </head>
+
+    <body class="font-stnd bg-gray-200 flex flex-row gap-10 w-screen h-screen overflow-hidden">
+        <div onclick="toggleFullColour()" style="background-color: #000000;" class="w-screen h-screen absolute m-0 transform -translate-y-full transition-all duration-1000 ease-in-out" id="colourDisplayF"></div>
+        <div class="flex flex-col m-10 p-4 border-2 gap-4 rounded-lg border-gray-500 flex-1 justify-start items-center">
+            <a href="/#4" class="text-xl">&lt; Return Home</a>
+            <div onclick="toggleFullColour()" style="background-color: #000000;" class="w-64 h-64 border-2 rounded-lg border-black transition-all duration-1000 ease-in-out" id="colourDisplay">a</div>
+            <p class="text-xl" id="textOutput">#000000 - rgb(0, 0, 0)</p>
+            <input type="color" style="outline: none;" onchange="setColour(this.value)">
+        </div>
+    </body>
+
+</html>
