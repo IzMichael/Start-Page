@@ -17,3 +17,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.links5').load("/universal-assets/links5.html");
 });
+
+$(document).ready(function () {
+    $('.links6').load("/universal-assets/links6.html");
+});
