@@ -42,6 +42,7 @@ function hideAll() {
     var page3 = document.getElementById("3");
     var page4 = document.getElementById("4");
     var page5 = document.getElementById("5");
+    var page6 = document.getElementById("6");
     var actionPanel = document.getElementById("actionPanel");
     var serverPanel = document.getElementById("serverPanel");
     page1.classList.add("hidden");
@@ -49,6 +50,7 @@ function hideAll() {
     page3.classList.add("hidden");
     page4.classList.add("hidden");
     page5.classList.add("hidden");
+    page6.classList.add("hidden");
     actionPanel.classList.add("hidden");
     serverPanel.classList.add("hidden");
 }
